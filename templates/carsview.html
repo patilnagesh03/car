@@ -1,0 +1,93 @@
+{% comment %} {% extends "index.html" %} {% endcomment %}
+{% include "partial/header.html" %}
+{% block content %}
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .car-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .car-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .car-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .car-info {
+      padding: 15px;
+    }
+
+    .car-info h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .car-info p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    .price {
+      color: #28a745;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .grid-container a{
+      text-decoration : none;
+    }
+  </style>
+
+  <h1>Popular Cars</h1>
+<div class="grid-container">
+  {% for car in cars %}
+  <a href="/www/car/{{car.id}}/">git 
+    <div class="car-card">
+      <img class="car-image" src="{{car.image}}" alt="Car 1">
+      <div class="car-info">
+        <h3>Model: {{car.model}}</h3>
+        <p>Brand: {{car.make}} </p>
+        <p class="price">Available: {{car.available}}</p>
+      </div>
+    </div>
+  </a>
+
+ {% endfor %}
+
+</div>
+
+</body>
+{% endblock %}
+
+{% include "partial/footer.html" %}
+

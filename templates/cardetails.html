@@ -1,0 +1,93 @@
+{% extends "index.html" %}
+
+{% block content %}
+<style>
+  .detail-container {
+      width: 80%;
+      margin: 50px auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      overflow: hidden;
+  }
+  .car-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+  }
+  .car-details {
+      display: flex;
+      margin-top: .5px;
+  }
+  .car-info {
+      flex: 1;
+      padding: 10px;
+  }
+  .car-info h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #333;
+  }
+  .car-info p {
+      font-size: 1.2em;
+      color: #666;
+      line-height: 1.6;
+  }
+  .car-info .price {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #000;
+  }
+  .car-specs {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+  }
+  .car-specs li {
+      font-size: 1.1em;
+      margin: 8px 0;
+      color: #555;
+  }
+  .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 30px;
+      text-decoration: none;
+  }
+  .btn:hover {
+      background-color: #0056b3;
+  }
+</style>
+<body>
+
+<div class="detail-container">
+  <img src="{{cars.image}}" alt="Car Image" class="car-image">
+  <div class="car-details">
+    <div class="car-info">
+      <h2>{{cars.model}} {{cars.type}}</h2>
+      <h3>{{cars.make}}</h3>
+      <p class="price">$89,990</p>
+      <p>Cars are motor vehicles designed for road transport, typically with four wheels and powered by an internal combustion engine or electric motor. They offer convenience, speed, and comfort for personal travel. Modern cars come equipped with advanced technology, safety features, and eco-friendly options.</p>
+
+      <ul class="car-specs">
+          <li><strong>Engine:</strong> 100 kWh Battery</li>
+          <li><strong>Max Speed:</strong> 200 mph</li>
+          <li><strong>Range:</strong> 370 miles</li>
+          <li><strong>Seats:</strong> 5</li>
+          <li><strong>Transmission:</strong> Automatic</li>
+      </ul>
+      <pre>  </pre>
+      <a href="https://www.tesla.com/models" class="btn" target="_blank">Learn More</a>
+    </div>
+  </div>
+</div>
+
+</body>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<style>
+    social-icons i{
+        color:white;
+    }
+</style>
+<body>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 AutoZone. All rights reserved.</p>
+            <div class="social-icons">
+                {% comment %} <a href="#"><i class="fa-brands fa-facebook"></i></a> {% endcomment %}
+                {% comment %} <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a> {% endcomment %}
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/20/20673.png" alt=""></a>
+                <a href="#"><img src="https://pixsector.com/cache/200e7bcc/av16efeffeed4418c90c1.png" alt=""></a>
+                <a href="#"><img src="https://brandlogos.net/wp-content/uploads/2015/09/twitter-icon-circle-logo.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

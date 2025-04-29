@@ -1,0 +1,111 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .services-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .service-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .service-description {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+<body>
+
+<div class="services-container">
+    <h1>Our Car Services</h1>
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <div class="service-title">General Maintenance</div>
+            <div class="service-description">Regular check-ups to ensure your car runs smoothly and safely on the road.</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🛢️</div>
+            <div class="service-title">Oil Change</div>
+            <div class="service-description">Quick and efficient oil changes with high-quality lubricants for engine health.</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔋</div>
+            <div class="service-title">Battery Check</div>
+            <div class="service-description">We inspect and replace car batteries to keep your vehicle powered reliably.</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🚗</div>
+            <div class="service-title">Car Wash & Detailing</div>
+            <div class="service-description">Interior and exterior cleaning to give your car a sparkling, like-new finish.</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <div class="service-title">Engine Repair</div>
+            <div class="service-description">Expert diagnostics and repairs to resolve engine issues efficiently.</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🧰</div>
+            <div class="service-title">Tire Services</div>
+            <div class="service-description">Tire rotation, alignment, and replacements to improve performance and safety.</div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+{% endblock %}
