@@ -71,7 +71,10 @@
   <h1>Popular Cars</h1>
 <div class="grid-container">
   {% for car in cars %}
-  <a href="/www/car/{{car.id}}/">git 
+  {% comment %}
+    nagesh rocks
+  {% endcomment %}
+  <a href="/www/car/{{car.id}}/">
     <div class="car-card">
       <img class="car-image" src="{{car.image}}" alt="Car 1">
       <div class="car-info">
